@@ -8,28 +8,28 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="description"
-      content="Celebrating #15YearsofYouTube with fans and creators through a unique immersive AR experience—#15YearsofYouTube Superfan Challenge."
+      content="Celebrating #15YearsofNestle with fans and creators through a unique immersive AR experience—#15YearsofNestle Superfan Challenge."
     />
-    <title>#15YearsofYouTube Superfan Challenge</title>
+    <title>#Nestle Fans</title>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="#15YearsofYouTube Superfan Challenge" />
+    <meta property="og:title" content="#15YearsofNestle Superfan Challenge" />
     <meta
       property="og:description"
-      content="Celebrating #15YearsofYouTube with fans and creators through a unique immersive AR experience—#15YearsofYouTube Superfan Challenge."
+      content="Celebrating #15YearsofNestle with fans and creators through a unique immersive AR experience—#15YearsofNestle Superfan Challenge."
     />
     <meta property="og:image" content="https://i.imgur.com/mdmrUL9.jpg" />
     <meta
       property="og:image:alt"
-      content="#15YearsofYouTube Superfan Challenge Image"
+      content="#15YearsofNestle Superfan Challenge Image"
     />
 
     <!-- Twitter Card Meta Tags (optional) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="#15YearsofYouTube Superfan Challenge" />
+    <meta name="twitter:title" content="#15YearsofNestle Superfan Challenge" />
     <meta
       name="twitter:description"
-      content="Celebrating #15YearsofYouTube with fans and creators through a unique immersive AR experience—#15YearsofYouTube Superfan Challenge."
+      content="Celebrating #15YearsofNestle with fans and creators through a unique immersive AR experience—#15YearsofNestle Superfan Challenge."
     />
     <meta name="twitter:image" content="https://i.imgur.com/mdmrUL9.jpg" />
 
@@ -275,7 +275,7 @@
                 counter < 10 ? (counter = "0" + counter) : counter;
               document.getElementById(
                 "creatorCount"
-              ).src = `assets/images/score${newCounter}.png`;
+              ).src = `assets/clusters/nestle-clusters/count-images/score${newCounter}.png`;
               // console.log(newCounter)
               const creatorsText = document.querySelector(".creators-text");
               if (newCounter === "05") {
@@ -288,7 +288,7 @@
                 setTimeout(() => {
                   creatorsText.innerHTML = "";
                 }, 5000);
-              } else if (newCounter === 10) {
+              } else if (newCounter === 7) {
                 // console.log('10 reached')
                 creatorsText.innerHTML =
                   " <p>You&#39;re on a roll,<br/>keep going 💪</p>";
@@ -296,7 +296,7 @@
                 setTimeout(() => {
                   creatorsText.innerHTML = "";
                 }, 5000);
-              } else if (newCounter === 15) {
+              } else if (newCounter === 11) {
                 if (idleTimer) {
                   clearInterval(idleTimer);
                 }
@@ -1122,7 +1122,7 @@
           geometry="phiLength: 64; thetaLength: 40; thetaStart: 37.880; phiStart:252.000"
         ></a-sphere> -->
 
-        <!-- 15Years of YouTube logo layer-->
+        <!-- 15Years of Nestle logo layer-->
         <!-- <a-sphere
           id="mid_00Img"
           mixin="anim"
@@ -1577,7 +1577,7 @@
       <div class="creators-container" id="numberBox">
         <div class="imageWinning">
           <img
-            src="assets/images/score15.png"
+            src="assets/clusters/nestle-clusters/count-images/score11.png"
             alt=""
             class="img-fluid numberImg"
             width="150"
@@ -1606,7 +1606,7 @@
               <!-- Please Remove h3 tag and above svg. use this image as score. For example, score00.png and score01.png for score01 and so on. -->
               <img
                 id="creatorCount"
-                src="assets/images/score00.png"
+                src="assets/clusters/nestle-clusters/count-images/score00.png"
                 alt=""
                 class="img-fluid opacityW"
                 width="150"
@@ -1643,7 +1643,7 @@
         <div class="input-box">
           <p class="prevent-select">
             Oh btw,<br />
-            we're YouTube.<br />
+            we're Nestle.<br />
             And you?
           </p>
           <input
