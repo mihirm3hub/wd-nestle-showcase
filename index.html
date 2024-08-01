@@ -200,7 +200,7 @@
             }
 
             if (creatorAudio && window.soundEffectAllowed) {
-              creatorAudio.play();
+              // creatorAudio.play();
             }
 
             const lastLayerClustorId = this.el.getAttribute("last-id");
@@ -347,40 +347,40 @@
   <body>
     <a-scene landing-page xrextras-gesture-detector vr-mode-ui="enabled: false">
       <a-assets>
-        <img
+        <!-- <img
           id="out_01"
           crossorigin="anonymous"
-          src="./assets/clusters/CC01_1100x800-Flipped.png"
+          src="./assets/clusters/nestle-clusters/KK LOGO-P186C-01.png"
         />
         <img
           id="out_05"
           crossorigin="anonymous"
-          src="./assets/clusters/CC05_1300x1000-Flipped.png"
+          src="./assets/clusters/nestle-clusters/MAGGI 2 min MAGNET LOGO-01.png"
         />
         <img
           id="out_02"
           crossorigin="anonymous"
-          src="./assets/clusters/CC02_1100x800-Flipped.png"
+          src="./assets/clusters/nestle-clusters/Maggi Pin.png"
         />
         <img
           id="out_14"
           crossorigin="anonymous"
-          src="./assets/clusters/CC14_2000x750-Flipped.png"
+          src="./assets/clusters/nestle-clusters/Milkybar logo.png"
         />
         <img
           id="out_11"
           crossorigin="anonymous"
-          src="./assets/clusters/CC11_1600x1000-Flipped.png"
+          src="./assets/clusters/nestle-clusters/MUNCH LOGO.png"
         />
         <img
           id="out_12"
           crossorigin="anonymous"
-          src="./assets/clusters/CC12_1600x1000-Flipped.png"
+          src="./assets/clusters/nestle-clusters/Nesscafe logo-01.png"
         />
         <img
           id="out_15"
           crossorigin="anonymous"
-          src="./assets/clusters/CC15_2000x750-Flipped.png"
+          src="./assets/clusters/nestle-clusters/Nesscafe logo-02.png"
         />
         <img
           id="out_10"
@@ -427,7 +427,7 @@
         <img
           id="mid_00"
           crossorigin="anonymous"
-          src="https://cdn.glitch.global/4da0b529-cee9-4338-8982-98066a574a50/CC00_NEW%20(1).png?v=1702218866520"
+          src="./assets/clusters/nestle-clusters/Nesscafe logo-01.png"
         />
         <img
           id="mid_08"
@@ -449,7 +449,7 @@
           id="top_13"
           crossorigin="anonymous"
           src="./assets/clusters/CC13_1600x1000-Flipped.png"
-        />
+        /> -->
 
         <a-mixin
           id="image2"
@@ -477,7 +477,7 @@
           response-type="arraybuffer"
         ></audio>
 
-        <audio
+        <!-- <audio
           id="CC01-audio"
           preload="auto"
           class="a-sound"
@@ -596,7 +596,7 @@
           crossorigin="anonymous"
           src="./assets/sounds/CC15.mp3"
           response-type="arraybuffer"
-        ></audio>
+        ></audio> -->
         <audio
           id="crowd-audio"
           preload="auto"
@@ -605,6 +605,70 @@
           src="./assets/sounds/short-crowd-cheer.mp3"
           response-type="arraybuffer"
         ></audio>
+
+        <img
+          id="nestleLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/nestle-9-logo-png-transparent.png"
+        />
+
+        <img
+          id="kkLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/KK LOGO-P186C-01.png"
+        />
+        <img
+          id="milkyLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/Milkybar logo.png"
+        />
+        <img
+          id="munchLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/MUNCH LOGO.png"
+        />
+        <img
+          id="nesMainLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/Nesscafe logo-01.png"
+        />
+        <img
+          id="maggiPinLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/Maggi Pin.png"
+        />
+
+        <img
+          id="nesSunLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/Nescafe Sunrise_200g jar_44219777 3D 4.png"
+        />
+        <img
+          id="memLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/MeM logo 2.png"
+        />
+        <img
+          id="maggi2minLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/MAGGI 2 min MAGNET LOGO-01.png"
+        />
+        <img
+          id="maggiBowlLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/Bowl.png"
+        />
+
+        <img
+          id="nesChilledLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/New Chilled Latte Can 3D.png"
+        />
+        <img
+          id="nesIntenseLogo"
+          crossorigin="anonymous"
+          src="./assets/clusters/nestle-clusters/New Intense Cafe Can 3D.png"
+        />
       </a-assets>
       <!-- Ask user for camera permissions, display some text if permission is denied -->
       <!--    <a-entity zappar-permissions-ui id="permissions"></a-entity> -->
@@ -639,11 +703,219 @@
         raycaster="objects: .cantap"
         cursor="fuse: false; rayOrigin: mouse;"
       ></a-entity>
+      
+      <a-entity
+      id="group"
+      no-cull
+      rotation="0 214 0"
+      position="0 -60 0"
+      scale="100 100 100"
+    >
+    
+      <a-sphere
+        id="foo"
+        position="0 0 0"
+        radius="5.05"
+        theta-length="145"
+        material="color: #59A1FF; shader: flat; side: double; opacity:0.7; transparent:false; wireframe:false;"
+      ></a-sphere>
+        <!-- nestle logo image-->
+        <a-sphere
+          id="mid_00Img"
+          mixin="anim"
+          material="src: #nestleLogo; repeat:-1"      
+          geometry="phiLength: 48; thetaLength: 48; thetaStart: 40; phiStart:212"
+        ></a-sphere>
+        <!-- bottom level logos -->
+        <a-sphere
+          id="bot_00Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC10-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 63; thetaLength: 44; thetaStart: 90; phiStart:72"
+        ></a-sphere>
+        <a-sphere
+          id="bot_00ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #kkLogo; repeat:-1"
+          geometry="phiLength: 63; thetaLength: 44; thetaStart: 90; phiStart:72"
+        ></a-sphere>
+        <a-sphere
+          id="bot_01Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC10-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 75; thetaLength: 35; thetaStart: 90; phiStart:135"
+        ></a-sphere>
+        <a-sphere
+          id="bot_01ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #milkyLogo; repeat:-1"
+          geometry="phiLength: 75; thetaLength: 35; thetaStart: 90; phiStart:135"
+        ></a-sphere>
+        <a-sphere
+          id="bot_02Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC10-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 75; thetaLength: 30; thetaStart: 90; phiStart:216"
+        ></a-sphere>
+        <a-sphere
+          id="bot_02ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #munchLogo; repeat:-1"
+          geometry="phiLength: 75; thetaLength: 30; thetaStart: 90; phiStart:216"
+        ></a-sphere>
+        <a-sphere
+          id="bot_03Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC10-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 75; thetaLength: 30; thetaStart: 90; phiStart:300"
+        ></a-sphere>
+        <a-sphere
+          id="bot_03ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #nesMainLogo; repeat:-1"
+          geometry="phiLength: 75; thetaLength: 30; thetaStart: 90; phiStart:300"
+        ></a-sphere>
+        <a-sphere
+          id="bot_04Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC10-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 75; thetaLength: 40; thetaStart: 90; phiStart:10"
+        ></a-sphere>
+        <a-sphere
+          id="bot_04ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #maggiPinLogo; repeat:-1"
+          geometry="phiLength: 75; thetaLength: 40; thetaStart: 90; phiStart:10"
+        ></a-sphere>
+   
+        <!-- Mid level logos -->
+        <a-sphere
+          id="mid_01Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC06-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 30; thetaLength: 53; thetaStart: 40; phiStart:90;"
+        ></a-sphere>
+        <a-sphere
+          id="mid_01ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #nesSunLogo;repeat:-1"
+          geometry="phiLength: 30; thetaLength: 53; thetaStart: 40; phiStart:90;"
+        ></a-sphere>
 
+        <a-sphere
+          id="mid_02Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC06-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 44; thetaLength: 34; thetaStart: 50; phiStart:140;"
+        ></a-sphere>
+        <a-sphere
+          id="mid_02ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #maggiBowlLogo;repeat:-1"
+          geometry="phiLength: 44; thetaLength: 34; thetaStart: 50; phiStart:140;"
+        ></a-sphere>
+
+        <a-sphere
+          id="mid_03Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC06-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 79; thetaLength: 46; thetaStart: 40; phiStart:280;"
+        ></a-sphere>
+        <a-sphere
+          id="mid_03ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #memLogo;repeat:-1"
+          geometry="phiLength: 79; thetaLength: 46; thetaStart: 40; phiStart:280;"
+        ></a-sphere>
+        
+        <a-sphere
+          id="mid_04Img"
+          mixin="anim"
+          class="cantap"
+          audio-id="CC06-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="phiLength: 60; thetaLength: 60; thetaStart: 30; phiStart:10;"
+        ></a-sphere>
+        <a-sphere
+          id="mid_04ImgCluster"
+          mixin="image2"
+          class="cantap"
+          material="src: #maggi2minLogo;repeat:-1"
+          geometry="phiLength: 60; thetaLength: 60; thetaStart: 30; phiStart:10"
+        ></a-sphere>
+        
+        <!-- Top level logos -->
+        <a-plane
+          id="top_00Img"
+          click-sphere
+          class="cantap"
+          audio-id="CC04-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="height:1.431;width:1"
+          position="0.85 3.3 0.87"
+          scale="1.8 1.8 1.5"
+          rotation="75 55 95"
+        ></a-plane>
+        ></a-plane>
+        <a-plane
+          id="top_00ImgCluster"
+          class="cantap"
+          material="shader:flat; repeat:-1; src: #nesIntenseLogo; side: double; transparent:true; opacity:0.3; alphaTest:0.2"
+          geometry="height:1.431;width:1"
+          position="0.85 3.3 0.87"
+          scale="1.8 1.8 1.5"
+          rotation="-75 55 -95"
+        ></a-plane>
+
+        <a-plane
+          id="top_01Img"
+          click-sphere
+          class="cantap"
+          audio-id="CC13-audio"
+          material="opacity:0;alphaTest:0.5"
+          geometry="height:1.431;width:1"
+          position="-0.6 3.3 -0.715"
+          scale="1.8 1.8 1.5"
+          rotation="75 55 95"
+        ></a-plane>
+        <a-plane
+          id="top_01ImgCluster"
+          class="cantap"
+          material="shader:flat; src: #nesChilledLogo; side: double; transparent:true; opacity:0.3; alphaTest:0.2"
+          geometry="height:1.431;width:1"
+          position="-0.6 3.3 -0.715"
+          scale="1.8 1.8 1.5"
+          rotation="75 55 95"
+        ></a-plane>
+    </a-entity>
       <!-- Setup our instant tracker and start it in placement mode so the user can -->
       <!-- choose a location for the object -->
       <!-- <a-entity zappar-instant="placement-mode: true; anchorPoseOffset: 0 -1.5 -6;" id="instant-tracker"> -->
-      <a-entity
+      <!-- <a-entity
         id="group"
         no-cull
         rotation="0 214 0"
@@ -657,9 +929,9 @@
           radius="5.05"
           theta-length="145"
           material="color: #59A1FF; shader: flat; side: double; opacity:0.7; transparent:false; wireframe:false;"
-        ></a-sphere>
+        ></a-sphere>-->
         <!-- bottom ring layer CC01,CC05,CC02,CC14,CC11,CC12,CC15,CC10 -->
-        <a-sphere
+        <!-- <a-sphere
           id="out_01Img"
           mixin="anim"
           class="cantap"
@@ -672,8 +944,8 @@
           id="out_01ImgCluster"
           mixin="image2"
           class="cantap"
-          material="src: #out_01"
-          sprite-sheet="cols:5; rows:6; progress:0;"
+          material="src: #out_01; repeat:-1"
+          
           geometry="phiLength: 38.840; thetaLength: 50.000; thetaStart: 64.980; phiStart:31.710"
         ></a-sphere>
 
@@ -689,8 +961,8 @@
           id="out_05ImgCluster"
           mixin="image2"
           class="cantap"
-          material="src: #out_05"
-          sprite-sheet="cols:5; rows: 6; progress: 0.0;"
+          material="src: #out_05; repeat:-1"
+         
           geometry="phiLength: 48.160; thetaLength: 48.890; thetaStart: 66.800; phiStart:348.890"
         ></a-sphere>
 
@@ -706,8 +978,8 @@
           id="out_02ImgCluster"
           mixin="image2"
           class="cantap"
-          material="src: #out_02"
-          sprite-sheet="cols:5; rows: 6; progress: 0.0;"
+          material="src: #out_02; repeat:-1"
+          
           geometry="phiLength: 40; thetaLength: 52; thetaStart: 68; phiStart:320"
         ></a-sphere>
 
@@ -724,8 +996,8 @@
           id="out_14ImgCluster"
           mixin="image2"
           class="cantap"
-          material="src: #out_14"
-          sprite-sheet="cols:4; rows: 5; progress: 0.0;"
+          material="src: #out_14; repeat:-1"
+         
           geometry="phiLength: 65.560; thetaLength: 47.700; thetaStart: 68.950; phiStart:258.080"
         ></a-sphere>
 
@@ -742,8 +1014,8 @@
           id="out_11ImgCluster"
           mixin="image2"
           class="cantap animate"
-          material="src: #out_11"
-          sprite-sheet="cols:5; rows: 6; progress: 0.0;"
+          material="src: #out_11; repeat:-1"
+          
           geometry="phiLength: 56.860; thetaLength: 48.980; thetaStart: 73.890; phiStart:213.590"
         ></a-sphere>
 
@@ -759,8 +1031,8 @@
           id="out_12ImgCluster"
           mixin="image2"
           class="cantap animate"
-          material="src: #out_12"
-          sprite-sheet="cols:5; rows: 6; progress: 0.0;"
+          material="src: #out_12; repeat:-1"
+          
           geometry="phiLength: 51.900; thetaLength: 54.920; thetaStart: 67.970; phiStart:168.770"
         ></a-sphere>
 
@@ -777,8 +1049,8 @@
           id="out_15ImgCluster"
           mixin="image2"
           class="cantap"
-          material="src: #out_15"
-          sprite-sheet="cols:4; rows: 5; progress: 0.0;"
+          material="src: #out_15; repeat:-1"
+          
           geometry="phiLength: 62.270; thetaLength: 46.410; thetaStart: 69.370; phiStart:112.520"
         ></a-sphere>
 
@@ -797,10 +1069,10 @@
           material="src: #out_10"
           sprite-sheet="cols:5; rows: 6; progress: 0.0;"
           geometry="phiLength: 47.990; thetaLength: 56.000; thetaStart: 60.000; phiStart:67.670"
-        ></a-sphere>
+        ></a-sphere> -->
 
         <!-- Middle ring layer CC06,CC07,CC03,CC00,CC08,CC09 -->
-        <a-sphere
+        <!-- <a-sphere
           id="mid_06Img"
           mixin="anim"
           class="cantap"
@@ -848,10 +1120,10 @@
           material="src: #mid_03"
           sprite-sheet="cols:5; rows: 6; progress: 0.0;"
           geometry="phiLength: 64; thetaLength: 40; thetaStart: 37.880; phiStart:252.000"
-        ></a-sphere>
+        ></a-sphere> -->
 
         <!-- 15Years of YouTube logo layer-->
-        <a-sphere
+        <!-- <a-sphere
           id="mid_00Img"
           mixin="anim"
           material="src: #mid_00"
@@ -891,10 +1163,10 @@
           material="src: #mid_09"
           sprite-sheet="cols:5; rows: 6; progress: 0.0;"
           geometry="phiLength: 66; thetaLength: 50; thetaStart: 34.750; phiStart:95"
-        ></a-sphere>
+        ></a-sphere> -->
 
         <!-- Top ring layer CC04,CC13 -->
-        <a-plane
+        <!-- <a-plane
           id="top_04Img"
           click-sphere
           class="cantap"
@@ -936,11 +1208,11 @@
           position="-0.6 3.3 -0.715"
           scale="1.8 1.8 1.5"
           rotation="80 42 0"
-        ></a-plane>
+        ></a-plane> -->
 
         <!-- last layer -->
 
-        <a-sphere
+        <!-- <a-sphere
           id="last_16ImgCluster"
           mixin="image2"
           class="cantap last-layer"
@@ -975,7 +1247,7 @@
           sprite-sheet="cols:4; rows: 5; progress: 0.0;"
           geometry="primitive:  sphere;  phiLength:  82.85;  thetaLength:  33.24;  thetaStart:  111.87;  phiStart:  276.82;"
         ></a-sphere>
-      </a-entity>
+      </a-entity>  -->
       <!-- </a-entity> -->
     </a-scene>
     <video

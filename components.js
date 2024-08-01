@@ -149,7 +149,7 @@ const handleUIComponent = () => {
       musicIcon.src = "assets/images/musicoff.png";
     } else {
       audio.volume = 0.6;
-      audio.play();
+      // audio.play();
       musicIcon.src = "assets/images/musicToggle.png";
     }
   });
@@ -240,9 +240,9 @@ const handleUIComponent = () => {
 
   loadImagesAndHideSplashScreen(() => {
     console.log('check exec')
-    
-   // document.getElementById("tapnow").style.display = "block";
-   // document.getElementById("loading-pulse").style.display = "none";
+
+    // document.getElementById("tapnow").style.display = "block";
+    // document.getElementById("loading-pulse").style.display = "none";
 
     // Event listener for click or tap on the splash screen
     splashScreen.addEventListener("click", () => {
@@ -316,7 +316,7 @@ const handleUIComponent = () => {
     // Play bg music
     if (!playing) {
       audio.volume = 0.6;
-      audio.play();
+      // audio.play();
 
       musicIcon.src = 'assets/images/musicToggle.png';
     } else {

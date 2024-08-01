@@ -1004,7 +1004,7 @@ ol {
 /* Desktop Screen section Starts */
 
 .desk-screen {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
