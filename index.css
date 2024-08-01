@@ -921,7 +921,10 @@ ol {
 }
 
 .numberCenter .imageWinning {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
 }
 
 .white-dots {

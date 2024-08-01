@@ -34,12 +34,12 @@
     <meta name="twitter:image" content="https://i.imgur.com/mdmrUL9.jpg" />
 
     <!-- ======== FACICON ======== -->
-    <link
+    <!-- <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="assets/images/favicon.ico"
-    />
+    /> -->
 
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
     <script
@@ -324,15 +324,15 @@
                   .getElementById("numberBox")
                   .classList.add("numberCenter");
                 document.querySelector("#crowd-audio").play();
-                setTimeout(() => {
-                  document.querySelector("#goBtn").style.display = "flex";
-                  creatorsText.innerHTML = " <p>Time to flex your win 🎉</p>";
-                }, 500);
+                // setTimeout(() => {
+                //   document.querySelector("#goBtn").style.display = "flex";
+                //   creatorsText.innerHTML = " <p>Time to flex your win 🎉</p>";
+                // }, 500);
 
-                setTimeout(() => {
-                  document.getElementById("confettiIframe").style.display =
-                    "none";
-                }, 5000);
+                // setTimeout(() => {
+                //   document.getElementById("confettiIframe").style.display =
+                //     "none";
+                // }, 5000);
               }
             }
             this.el.classList.add("creatorClicked");
@@ -1325,10 +1325,10 @@
 
         <img src="assets/images/UI-1.gif" alt="" class="img-fluid" />
         <div class="center-splash">
-          <img src="assets/images/SuperfanChallenge.png" class="img-fluid" />
+          <img src="assets/clusters/nestle-clusters/nestle-white.png" class="img-fluid" />
           <div class="content-splash">
             <p class="prevent-select">
-              Find your favourite creators hidden all around you 🤯
+              Find Nestle brands and goodies hidden all around you 🤯
             </p>
           </div>
         </div>
@@ -1342,7 +1342,7 @@
           ></iframe> 
         </div>
         <button id="zappar-placement-ui" class="clickable">ENTER</button>-->
-        <div class="step-btn" style="bottom: 10%">
+        <div class="step-btn" style="bottom: 8%">
           <button id="enterButton" class="ins-btn">
             LOADING...
           </button>
@@ -1582,15 +1582,23 @@
             class="img-fluid numberImg"
             width="150"
           />
+          <img
+          src="assets/clusters/nestle-clusters/Posterr.jpg"
+          alt=""
+          class="img-fluid numberImg"
+          style="width: 300px;
+    max-width: 300px;border-radius: 8%;"
+        />
         </div>
+
         <div class="creators-box">
           <div class="creators-content">
             <div class="creators-text">
               <p class="prevent-select">The challenge is on 🔥</p>
             </div>
-            <div id="goBtn" class="step-btn numberBtn" style="display: none">
+            <!-- <div id="goBtn" class="step-btn numberBtn" style="display: none">
               <button id="letsgoButton">LET'S GO</button>
-            </div>
+            </div> -->
             <div class="text-shadow stroke-behind">
               <!-- <svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
                 <text x="10" y="150" class="stroke-behind">00/15</text>

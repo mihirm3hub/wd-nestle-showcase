@@ -326,16 +326,16 @@ const handleUIComponent = () => {
     }
   });
 
-  letsgoButton.addEventListener("click", () => {
-    try {
-      window.analyticsLog(`LetsGo`, "Experience Completed");
-    } catch (e) {
-      console.log(e);
-    }
-    gameScreen.style.display = "none";
-    typeScreen.style.display = "flex";
-    document.getElementById("confettiIframe").style.display = "none";
-  });
+  // letsgoButton.addEventListener("click", () => {
+  //   try {
+  //     window.analyticsLog(`LetsGo`, "Experience Completed");
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  //   gameScreen.style.display = "none";
+  //   typeScreen.style.display = "flex";
+  //   document.getElementById("confettiIframe").style.display = "none";
+  // });
 
   submitButton.addEventListener("click", () => {
     const val = document.getElementById("inputText").value;
